@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/models/category_model.dart';
 import 'package:furniture_app/pages/category_page.dart';
 import 'package:furniture_app/pages/home.dart';
+import 'package:furniture_app/pages/login.dart';
 import 'package:furniture_app/pages/onboarding.dart';
+import 'package:furniture_app/pages/splash_screen.dart';
 import 'package:furniture_app/pages/wishlist.dart';
 import 'package:furniture_app/utils/routes.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -31,8 +33,11 @@ class MyApp extends StatelessWidget {
           MyRoutes.home: (context) => const Home(),
           MyRoutes.categoryPage: (context) => const CategoryPage(),
           MyRoutes.onBoarding: (context) => const OnBoarding(),
+          MyRoutes.splashScreen: (context) => const SplashScreen(),
+          MyRoutes.wishlist: (context) => const WishList(),
+          MyRoutes.login: (context) => const Login(),
         },
-        home: const WishList(),
+        home: const Login(),
       );
     });
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/widgets/main_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -50,19 +51,9 @@ class OnBoarding extends StatelessWidget {
             SizedBox(
               height: 5.h,
             ),
-            GestureDetector(
-              child: Container(
-                width: 90.w,
-                height: 8.h,
-                decoration: BoxDecoration(
-                    color: Colors.orange,
-                    borderRadius: BorderRadius.circular(15)),
-                child: Center(
-                    child: Text(
-                  "Get Started",
-                  style: TextStyle(color: Colors.white, fontSize: 16.sp),
-                )),
-              ),
+            MainButton(
+              text: "Get Started",
+              function: () {},
             )
           ],
         ),
