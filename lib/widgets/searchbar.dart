@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/components/search_bar/gf_search_bar.dart';
 
 class CustomSearchBar extends StatelessWidget {
+  final String hintText;
+  final bool hasScanIcon;
+
   const CustomSearchBar({
     super.key,
+    required this.hintText,
+    required this.hasScanIcon,
   });
 
   @override
@@ -13,9 +18,11 @@ class CustomSearchBar extends StatelessWidget {
         searchBoxInputDecoration: InputDecoration(
             prefixIcon: const Icon(Icons.search),
             contentPadding:
-                const EdgeInsets.symmetric(vertical: 8), // to change height
-            hintText: "Search",
-            suffixIcon: const Icon(CupertinoIcons.qrcode_viewfinder),
+                const EdgeInsets.symmetric(vertical: 12), // to change height
+            hintText: hintText,
+            suffixIcon: (hasScanIcon)
+                ? const Icon(CupertinoIcons.qrcode_viewfinder)
+                : null,
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
                 borderSide: const BorderSide(width: 1, color: Colors.grey)),

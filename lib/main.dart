@@ -3,6 +3,7 @@ import 'package:furniture_app/models/category_model.dart';
 import 'package:furniture_app/pages/category_page.dart';
 import 'package:furniture_app/pages/home.dart';
 import 'package:furniture_app/pages/onboarding.dart';
+import 'package:furniture_app/pages/wishlist.dart';
 import 'package:furniture_app/utils/routes.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
           MyRoutes.categoryPage: (context) => const CategoryPage(),
           MyRoutes.onBoarding: (context) => const OnBoarding(),
         },
-        home: const Home(),
+        home: const WishList(),
       );
     });
   }

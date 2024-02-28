@@ -5,10 +5,10 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:furniture_app/models/category_model.dart';
 import 'package:furniture_app/widgets/home_widgets/categorylist.dart';
-import 'package:furniture_app/widgets/home_widgets/other_widgets.dart';
+import 'package:furniture_app/widgets/other_widgets.dart';
 import 'package:furniture_app/widgets/home_widgets/roomslist.dart';
-import 'package:furniture_app/widgets/home_widgets/searchbar.dart';
-import 'package:furniture_app/widgets/home_widgets/navbar.dart';
+import 'package:furniture_app/widgets/searchbar.dart';
+import 'package:furniture_app/widgets/navbar.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -40,7 +40,10 @@ class _HomeState extends State<Home> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const CustomSearchBar(),
+          const CustomSearchBar(
+            hintText: "Search categories or products",
+            hasScanIcon: true,
+          ),
           SizedBox(
             height: 1.h,
           ),
