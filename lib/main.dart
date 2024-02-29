@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/models/category_model.dart';
 import 'package:furniture_app/pages/category_page.dart';
+import 'package:furniture_app/pages/checkout_details.dart';
 import 'package:furniture_app/pages/home.dart';
 import 'package:furniture_app/pages/login.dart';
 import 'package:furniture_app/pages/onboarding.dart';
+import 'package:furniture_app/pages/signup.dart';
 import 'package:furniture_app/pages/splash_screen.dart';
 import 'package:furniture_app/pages/wishlist.dart';
 import 'package:furniture_app/utils/routes.dart';
@@ -36,8 +38,10 @@ class MyApp extends StatelessWidget {
           MyRoutes.splashScreen: (context) => const SplashScreen(),
           MyRoutes.wishlist: (context) => const WishList(),
           MyRoutes.login: (context) => const Login(),
+          MyRoutes.signup: (context) => const Signup(),
+          MyRoutes.checkoutDetail: (context) => const CheckoutDetails(),
         },
-        home: const Login(),
+        home: const Signup(),
       );
     });
   }

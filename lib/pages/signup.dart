@@ -6,41 +6,32 @@ import 'package:furniture_app/widgets/main_button.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class Signup extends StatefulWidget {
+  const Signup({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Signup> createState() => _SignupState();
 }
 
-class _LoginState extends State<Login> {
+class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
+    TextEditingController nameController = TextEditingController();
+    TextEditingController confirmPasswordController = TextEditingController();
 
     return Scaffold(
-      body: Column(children: [
-        Container(
-          height: 36.h,
-          width: double.infinity,
-          color: const Color.fromARGB(190, 232, 244, 249),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              6.h.heightBox,
-              const MyBackButton(),
-              1.h.heightBox,
-              const PictureBox()
-            ],
-          ),
-        ),
-        Padding(
+      appBar: AppBar(),
+      body: SingleChildScrollView(
+        child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              3.h.heightBox,
+              5.h.heightBox,
+              "Signup".text.xl3.bold.make(),
+              5.h.heightBox,
               CustomTextField(
                 hintText: "Enter email",
                 leadingIcon: const Icon(Icons.mail),
@@ -49,32 +40,26 @@ class _LoginState extends State<Login> {
               2.h.heightBox,
               CustomTextField(
                   controller: passwordController,
+                  hintText: "Enter name",
+                  leadingIcon: const Icon(Icons.person)),
+              2.h.heightBox,
+              CustomTextField(
+                  controller: passwordController,
                   hintText: "Enter password",
                   leadingIcon: const Icon(Icons.lock)),
-              1.h.heightBox,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Checkbox(value: false, onChanged: (vallue) {}),
-                      "Remember me".text.make()
-                    ],
-                  ),
-                  GestureDetector(
-                    onTap: () {},
-                    child: "forgot password?".text.orange500.semiBold.make(),
-                  ),
-                ],
-              ),
               2.h.heightBox,
+              CustomTextField(
+                  controller: passwordController,
+                  hintText: "Confirm password",
+                  leadingIcon: const Icon(Icons.lock)),
+              3.h.heightBox,
               MainButton(
-                  text: "Login",
+                  text: "Create Account",
                   function: () {
-                    Navigator.pushNamed(context, MyRoutes.home);
+                    Navigator.pushNamed(context, MyRoutes.login);
                   }),
               3.h.heightBox,
-              "Or login with".text.make(),
+              "Or signup with".text.make(),
               3.h.heightBox,
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -92,16 +77,16 @@ class _LoginState extends State<Login> {
               )
             ],
           ),
-        )
-      ]),
+        ),
+      ),
       bottomNavigationBar: SizedBox(
         height: 10.h,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            "Don't have an account?".text.make(),
-            " register".text.semiBold.orange500.make().onTap(() {
-              Navigator.pushNamed(context, MyRoutes.signup);
+            "Already have an account?".text.make(),
+            " login".text.semiBold.orange500.make().onTap(() {
+              Navigator.pushNamed(context, MyRoutes.login);
             }),
           ],
         ),

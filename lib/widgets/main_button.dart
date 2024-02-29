@@ -13,7 +13,11 @@ class MainButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: function!(),
+      onTap: () {
+        if (function != null) {
+          function!();
+        }
+      },
       child: Container(
         width: 90.w,
         height: 8.h,
