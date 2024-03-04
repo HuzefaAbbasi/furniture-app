@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
           MyRoutes.signup: (context) => const Signup(),
           MyRoutes.checkoutDetail: (context) => const CheckoutDetails(),
         },
-        home: const Signup(),
+        home: const CheckoutDetails(),
       );
     });
   }

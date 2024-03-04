@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/models/category_model.dart';
 import 'package:furniture_app/widgets/back_button.dart';
-import 'package:furniture_app/widgets/category_page_widgets.dart/category_details..dart';
-import 'package:furniture_app/widgets/category_page_widgets.dart/product.dart';
+import 'package:furniture_app/widgets/category_page_widgets/category_details..dart';
+import 'package:furniture_app/widgets/category_page_widgets/product.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:velocity_x/velocity_x.dart';
 
