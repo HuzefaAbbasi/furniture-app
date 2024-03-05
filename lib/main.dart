@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/models/category_model.dart';
 import 'package:furniture_app/pages/category_page.dart';
 import 'package:furniture_app/pages/checkout_details.dart';
+import 'package:furniture_app/pages/checkout_payment.dart';
+import 'package:furniture_app/pages/checkout_processing.dart';
+import 'package:furniture_app/pages/checkout_success.dart';
 import 'package:furniture_app/pages/home.dart';
 import 'package:furniture_app/pages/login.dart';
 import 'package:furniture_app/pages/onboarding.dart';
@@ -40,6 +43,9 @@ class MyApp extends StatelessWidget {
           MyRoutes.login: (context) => const Login(),
           MyRoutes.signup: (context) => const Signup(),
           MyRoutes.checkoutDetail: (context) => const CheckoutDetails(),
+          MyRoutes.checkoutPayment: (context) => const CheckoutPayment(),
+          MyRoutes.checkoutProcessing: (context) => const CheckoutProcessing(),
+          MyRoutes.checkoutSuccess: (context) => const CheckoutSuccess(),
         },
         home: const CheckoutDetails(),
       );

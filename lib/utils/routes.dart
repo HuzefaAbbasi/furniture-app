@@ -7,4 +7,7 @@ class MyRoutes {
   static String login = '/login';
   static String signup = '/signup';
   static String checkoutDetail = '/checkoutDetail';
+  static String checkoutPayment = '/checkoutPayment';
+  static String checkoutProcessing = '/checkoutProcessing';
+  static String checkoutSuccess = '/checkoutSuccess';
 }
