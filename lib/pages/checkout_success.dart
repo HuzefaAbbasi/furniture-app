@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:furniture_app/utils/routes.dart';
 import 'package:furniture_app/widgets/main_button.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -39,7 +40,11 @@ class CheckoutSuccess extends StatelessWidget {
             8.h.heightBox,
             const OrderDetails(),
             3.h.heightBox,
-            MainButton(text: "Check order", function: () {})
+            MainButton(
+                text: "Check order",
+                function: () {
+                  Navigator.pushNamed(context, MyRoutes.orderDetails);
+                })
           ],
         ),
       ),

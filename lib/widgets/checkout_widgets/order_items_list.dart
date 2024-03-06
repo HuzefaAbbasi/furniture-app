@@ -65,7 +65,7 @@ class ItemsList extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 16.0),
       child: SizedBox(
-        height: 40.h,
+        height: 30.h,
         width: double.infinity,
         child: ListView.builder(
             itemCount: itemsList.length,

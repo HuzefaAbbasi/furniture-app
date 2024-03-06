@@ -8,6 +8,7 @@ import 'package:furniture_app/pages/checkout_success.dart';
 import 'package:furniture_app/pages/home.dart';
 import 'package:furniture_app/pages/login.dart';
 import 'package:furniture_app/pages/onboarding.dart';
+import 'package:furniture_app/pages/order_details.dart';
 import 'package:furniture_app/pages/signup.dart';
 import 'package:furniture_app/pages/splash_screen.dart';
 import 'package:furniture_app/pages/wishlist.dart';
@@ -46,6 +47,8 @@ class MyApp extends StatelessWidget {
           MyRoutes.checkoutPayment: (context) => const CheckoutPayment(),
           MyRoutes.checkoutProcessing: (context) => const CheckoutProcessing(),
           MyRoutes.checkoutSuccess: (context) => const CheckoutSuccess(),
+          MyRoutes.orderDetails: (context) => const OrderDetail(),
+          MyRoutes.orderDetails: (context) => const OrderDetail(),
         },
         home: const CheckoutDetails(),
       );

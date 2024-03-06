@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:furniture_app/utils/routes.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:slider_button/slider_button.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -20,7 +21,10 @@ class _PaymentNavBarState extends State<PaymentNavBar> {
       color: const Color.fromARGB(255, 29, 42, 68),
       child: Center(
         child: SliderButton(
-          action: () async {},
+          action: () async {
+            Navigator.pushNamed(context, MyRoutes.checkoutProcessing);
+            return Future.value(true);
+          },
           backgroundColor: const Color.fromRGBO(65, 85, 124, 0.871),
           icon: const Icon(
             CupertinoIcons.arrow_right,
