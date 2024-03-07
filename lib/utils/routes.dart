@@ -11,4 +11,6 @@ class MyRoutes {
   static String checkoutProcessing = '/checkoutProcessing';
   static String checkoutSuccess = '/checkoutSuccess';
   static String orderDetails = '/orderDetails';
+  static String yourCart = '/yourCart';
+  static String voucher = '/vouchers';
 }

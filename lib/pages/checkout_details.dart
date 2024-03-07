@@ -5,7 +5,7 @@ import 'package:furniture_app/models/address_model.dart';
 import 'package:furniture_app/models/checkout_item_model.dart';
 import 'package:furniture_app/widgets/checkout_details_widgets/address_list.dart';
 import 'package:furniture_app/widgets/checkout_widgets/order_summary.dart';
-import 'package:furniture_app/widgets/checkout_details_widgets/payment_button.dart';
+import 'package:furniture_app/widgets/navbar_button.dart';
 import 'package:furniture_app/widgets/checkout_details_widgets/shipment_info.dart';
 import 'package:furniture_app/widgets/checkout_widgets/order_items_list.dart';
 import 'package:furniture_app/widgets/checkout_details_widgets/voucher_info.dart';
@@ -48,7 +48,7 @@ class _CheckoutDetailsState extends State<CheckoutDetails> {
           ),
         ),
       ),
-      bottomNavigationBar: const PaymentButton(),
+      bottomNavigationBar: const NavBarButton(title: "Payment"),
     );
   }
 }
