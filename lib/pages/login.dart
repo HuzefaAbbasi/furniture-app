@@ -20,80 +20,82 @@ class _LoginState extends State<Login> {
     TextEditingController passwordController = TextEditingController();
 
     return Scaffold(
-      body: Column(children: [
-        Container(
-          height: 36.h,
-          width: double.infinity,
-          color: const Color.fromARGB(190, 232, 244, 249),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              6.h.heightBox,
-              const MyBackButton(),
-              1.h.heightBox,
-              const PictureBox()
-            ],
+      body: SingleChildScrollView(
+        child: Column(children: [
+          Container(
+            height: 36.h,
+            width: double.infinity,
+            color: const Color.fromARGB(190, 232, 244, 249),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                6.h.heightBox,
+                const MyBackButton(),
+                1.h.heightBox,
+                const PictureBox()
+              ],
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              3.h.heightBox,
-              CustomTextField(
-                hintText: "Enter email",
-                leadingIcon: const Icon(Icons.mail),
-                controller: emailController,
-              ),
-              2.h.heightBox,
-              CustomTextField(
-                  controller: passwordController,
-                  hintText: "Enter password",
-                  leadingIcon: const Icon(Icons.lock)),
-              1.h.heightBox,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Checkbox(value: false, onChanged: (vallue) {}),
-                      "Remember me".text.make()
-                    ],
-                  ),
-                  GestureDetector(
-                    onTap: () {},
-                    child: "forgot password?".text.orange500.semiBold.make(),
-                  ),
-                ],
-              ),
-              2.h.heightBox,
-              MainButton(
-                  text: "Login",
-                  function: () {
-                    Navigator.pushNamed(context, MyRoutes.home);
-                  }),
-              3.h.heightBox,
-              "Or login with".text.make(),
-              3.h.heightBox,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: Image.asset('assets/images/google-button.png')),
-                  IconButton(
-                      onPressed: () {},
-                      icon: Image.asset('assets/images/apple-button.png')),
-                  IconButton(
-                      onPressed: () {},
-                      icon: Image.asset('assets/images/facebook-button.png'))
-                ],
-              )
-            ],
-          ),
-        )
-      ]),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                3.h.heightBox,
+                CustomTextField(
+                  hintText: "Enter email",
+                  leadingIcon: const Icon(Icons.mail),
+                  controller: emailController,
+                ),
+                2.h.heightBox,
+                CustomTextField(
+                    controller: passwordController,
+                    hintText: "Enter password",
+                    leadingIcon: const Icon(Icons.lock)),
+                1.h.heightBox,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Checkbox(value: false, onChanged: (vallue) {}),
+                        "Remember me".text.make()
+                      ],
+                    ),
+                    GestureDetector(
+                      onTap: () {},
+                      child: "forgot password?".text.orange500.semiBold.make(),
+                    ),
+                  ],
+                ),
+                2.h.heightBox,
+                MainButton(
+                    text: "Login",
+                    function: () {
+                      Navigator.pushNamed(context, MyRoutes.home);
+                    }),
+                3.h.heightBox,
+                "Or login with".text.make(),
+                3.h.heightBox,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconButton(
+                        onPressed: () {},
+                        icon: Image.asset('assets/images/google-button.png')),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Image.asset('assets/images/apple-button.png')),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Image.asset('assets/images/facebook-button.png'))
+                  ],
+                )
+              ],
+            ),
+          )
+        ]),
+      ),
       bottomNavigationBar: SizedBox(
         height: 10.h,
         child: Row(

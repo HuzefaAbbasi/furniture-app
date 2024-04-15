@@ -1,5 +1,6 @@
 class MyRoutes {
   static String home = '/home';
+  static String discover = '/discover';
   static String categoryPage = '/categoryPage';
   static String onBoarding = '/onBoarding';
   static String splashScreen = '/splashScreen';
@@ -13,4 +14,5 @@ class MyRoutes {
   static String orderDetails = '/orderDetails';
   static String yourCart = '/yourCart';
   static String voucher = '/vouchers';
+  static String productDetails = '/productDetails';
 }

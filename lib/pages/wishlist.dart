@@ -18,7 +18,7 @@ class _WishListState extends State<WishList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: OtherWidgets.appBar,
+      appBar: OtherWidgets.makeMainAppBar(context),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

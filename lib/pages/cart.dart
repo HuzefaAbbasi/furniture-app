@@ -37,46 +37,57 @@ class _YourCartState extends State<YourCart> {
           ).p(16),
           const CartItemsList().p(16),
           1.h.heightBox,
-          Expanded(
-            child: Container(
-              color: const Color.fromARGB(255, 29, 42, 68),
-              width: double.infinity,
-              height: double.infinity,
-              child: Column(
-                children: [
-                  const UseVoucherCode(),
-                  2.h.heightBox,
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      "Total".text.xl.bold.white.make(),
-                      "\$900".text.xl2.bold.white.make()
-                    ],
-                  ),
-                  2.h.heightBox,
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      "Subtotal".text.white.make(),
-                      "\$900".text.white.make()
-                    ],
-                  ),
-                  1.h.heightBox,
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      "Discount".text.white.make(),
-                      "-\$0".text.white.make()
-                    ],
-                  )
-                ],
-              ).p(16),
-            ),
-          ),
+          const CartBottomBox(),
         ],
       ),
       bottomNavigationBar: const NavBarButton(
         title: "Checkout",
+      ),
+    );
+  }
+}
+
+class CartBottomBox extends StatelessWidget {
+  const CartBottomBox({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        color: const Color.fromARGB(255, 29, 42, 68),
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          children: [
+            const UseVoucherCode(),
+            2.h.heightBox,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                "Total".text.xl.bold.white.make(),
+                "\$900".text.xl2.bold.white.make()
+              ],
+            ),
+            2.h.heightBox,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                "Subtotal".text.white.make(),
+                "\$900".text.white.make()
+              ],
+            ),
+            1.h.heightBox,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                "Discount".text.white.make(),
+                "-\$0".text.white.make()
+              ],
+            )
+          ],
+        ).p(16),
       ),
     );
   }
