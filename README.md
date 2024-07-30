@@ -1,4 +1,4 @@
-Furn - A furniture app
+#Furn - A furniture e-commerce app
 
 Created a furniture e-commerce application UI in Flutter, featuring a user-friendly design for browsing and purchasing furniture items.
 
